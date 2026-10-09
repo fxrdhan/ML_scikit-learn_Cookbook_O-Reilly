@@ -115,6 +115,15 @@ New chapters are added as `Chapter_XX_<Title>/` folders with the same layout.
 
 All notebooks are committed **with their outputs**, use fixed random seeds, and rely only on datasets bundled with scikit-learn or generated synthetically, so they run offline and reproduce the same results.
 
+## 🧠 Learning Recommendations
+
+For beginners exploring this repository:
+
+- Start with Chapter 1 to understand the scikit-learn API.
+- Practice preprocessing before building machine learning models.
+- Run notebook examples and experiment with different parameters.
+- Compare model results to better understand algorithm performance.
+
 ## 🚀 Running the notebooks
 
 **Colab:** open a notebook on GitHub and use its **Open in Colab** badge.
