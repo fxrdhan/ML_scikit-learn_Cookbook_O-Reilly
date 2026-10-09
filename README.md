@@ -20,7 +20,7 @@ This repository reproduces, chapter by chapter, the code of **_scikit-learn Cook
 | 01 | Common Conventions and API Elements of scikit-learn | Done | [Chapter 1 notebook](Chapter_01_Common_Conventions_and_API_Elements/Chapter_01_Common_Conventions_and_API_Elements.ipynb) · [summary](Chapter_01_Common_Conventions_and_API_Elements/README.md) |
 | 02 | Pre-Model Workflow and Data Preprocessing | Done | [Chapter 2 notebook](Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing/Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing.ipynb) · [summary](Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing/README.md) |
 | 03 | Dimensionality Reduction Techniques | Done | [Chapter 3 notebook](Chapter_03_Dimensionality_Reduction_Techniques/Chapter_03_Dimensionality_Reduction_Techniques.ipynb) · [summary](Chapter_03_Dimensionality_Reduction_Techniques/README.md) |
-| 04 | Building Models with Distance Metrics and Nearest Neighbors | Planned | — |
+| 04 | Building Models with Distance Metrics and Nearest Neighbors | Done | [Chapter 4 notebook](Chapter_04_Distance_Metrics_and_Nearest_Neighbors/Chapter_04_Distance_Metrics_and_Nearest_Neighbors.ipynb) · [summary](Chapter_04_Distance_Metrics_and_Nearest_Neighbors/README.md) |
 | 05 | Linear Models and Regularization | Planned | — |
 | 06 | Advanced Logistic Regression and Extensions | Planned | — |
 | 07 | Support Vector Machines and Kernel Methods | Planned | — |
@@ -103,9 +103,12 @@ ML_scikit-learn_Cookbook_O-Reilly/
 ├── Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing/
 │   ├── README.md                                      # chapter summary
 │   └── Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing.ipynb
-└── Chapter_03_Dimensionality_Reduction_Techniques/
+├── Chapter_03_Dimensionality_Reduction_Techniques/
+│   ├── README.md                                      # chapter summary
+│   └── Chapter_03_Dimensionality_Reduction_Techniques.ipynb
+└── Chapter_04_Distance_Metrics_and_Nearest_Neighbors/
     ├── README.md                                      # chapter summary
-    └── Chapter_03_Dimensionality_Reduction_Techniques.ipynb
+    └── Chapter_04_Distance_Metrics_and_Nearest_Neighbors.ipynb
 ```
 
 New chapters are added as `Chapter_XX_<Title>/` folders with the same layout.
