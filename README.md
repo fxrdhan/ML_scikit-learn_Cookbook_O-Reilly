@@ -21,7 +21,7 @@ This repository reproduces, chapter by chapter, the code of **_scikit-learn Cook
 | 02 | Pre-Model Workflow and Data Preprocessing | Done | [Chapter 2 notebook](Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing/Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing.ipynb) · [summary](Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing/README.md) |
 | 03 | Dimensionality Reduction Techniques | Done | [Chapter 3 notebook](Chapter_03_Dimensionality_Reduction_Techniques/Chapter_03_Dimensionality_Reduction_Techniques.ipynb) · [summary](Chapter_03_Dimensionality_Reduction_Techniques/README.md) |
 | 04 | Building Models with Distance Metrics and Nearest Neighbors | Done | [Chapter 4 notebook](Chapter_04_Distance_Metrics_and_Nearest_Neighbors/Chapter_04_Distance_Metrics_and_Nearest_Neighbors.ipynb) · [summary](Chapter_04_Distance_Metrics_and_Nearest_Neighbors/README.md) |
-| 05 | Linear Models and Regularization | Planned | — |
+| 05 | Linear Models and Regularization | Done | [Chapter 5 notebook](Chapter_05_Linear_Models_and_Regularization/Chapter_05_Linear_Models_and_Regularization.ipynb) · [summary](Chapter_05_Linear_Models_and_Regularization/README.md) |
 | 06 | Advanced Logistic Regression and Extensions | Planned | — |
 | 07 | Support Vector Machines and Kernel Methods | Planned | — |
 | 08 | Tree-Based Algorithms and Ensemble Methods | Planned | — |
@@ -55,7 +55,7 @@ Models that predict from the most similar training examples. Introduces **distan
 
 ### Chapter 5 — Linear Models and Regularization
 Linear regression and the problem of overfitting. Covers **ordinary least squares**, **Ridge** (L2) and **Lasso** (L1) regression, **ElasticNet** (a mix of both), and the theory and practice of **regularization** — how penalizing coefficients trades a little bias for lower variance and how Lasso performs feature selection.
-*Key tools:* `LinearRegression`, `Ridge`, `Lasso`, `ElasticNet`, `PolynomialFeatures`.
+*Key tools:* `LinearRegression`, `Ridge`, `Lasso`, `ElasticNet`, `PolynomialFeatures`, `SplineTransformer`.
 
 ### Chapter 6 — Advanced Logistic Regression and Extensions
 Logistic regression as a probabilistic classifier and its extensions: **multiclass** strategies (one-vs-rest and multinomial/softmax), **regularization** in logistic regression (`C`, L1/L2 penalties), **multilabel** classification, and the **evaluation metrics** used for classifiers (precision, recall, F1, ROC-AUC, …), with exercises on visualizing results.
@@ -106,9 +106,12 @@ ML_scikit-learn_Cookbook_O-Reilly/
 ├── Chapter_03_Dimensionality_Reduction_Techniques/
 │   ├── README.md                                      # chapter summary
 │   └── Chapter_03_Dimensionality_Reduction_Techniques.ipynb
-└── Chapter_04_Distance_Metrics_and_Nearest_Neighbors/
+├── Chapter_04_Distance_Metrics_and_Nearest_Neighbors/
+│   ├── README.md                                      # chapter summary
+│   └── Chapter_04_Distance_Metrics_and_Nearest_Neighbors.ipynb
+└── Chapter_05_Linear_Models_and_Regularization/
     ├── README.md                                      # chapter summary
-    └── Chapter_04_Distance_Metrics_and_Nearest_Neighbors.ipynb
+    └── Chapter_05_Linear_Models_and_Regularization.ipynb
 ```
 
 New chapters are added as `Chapter_XX_<Title>/` folders with the same layout.
