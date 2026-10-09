@@ -19,7 +19,7 @@ This repository reproduces, chapter by chapter, the code of **_scikit-learn Cook
 |---|---|---|---|
 | 01 | Common Conventions and API Elements of scikit-learn | Done | [Chapter 1 notebook](Chapter_01_Common_Conventions_and_API_Elements/Chapter_01_Common_Conventions_and_API_Elements.ipynb) · [summary](Chapter_01_Common_Conventions_and_API_Elements/README.md) |
 | 02 | Pre-Model Workflow and Data Preprocessing | Done | [Chapter 2 notebook](Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing/Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing.ipynb) · [summary](Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing/README.md) |
-| 03 | Dimensionality Reduction Techniques | Planned | — |
+| 03 | Dimensionality Reduction Techniques | Done | [Chapter 3 notebook](Chapter_03_Dimensionality_Reduction_Techniques/Chapter_03_Dimensionality_Reduction_Techniques.ipynb) · [summary](Chapter_03_Dimensionality_Reduction_Techniques/README.md) |
 | 04 | Building Models with Distance Metrics and Nearest Neighbors | Planned | — |
 | 05 | Linear Models and Regularization | Planned | — |
 | 06 | Advanced Logistic Regression and Extensions | Planned | — |
@@ -100,9 +100,12 @@ ML_scikit-learn_Cookbook_O-Reilly/
 ├── Chapter_01_Common_Conventions_and_API_Elements/
 │   ├── README.md                                      # chapter summary
 │   └── Chapter_01_Common_Conventions_and_API_Elements.ipynb
-└── Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing/
+├── Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing/
+│   ├── README.md                                      # chapter summary
+│   └── Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing.ipynb
+└── Chapter_03_Dimensionality_Reduction_Techniques/
     ├── README.md                                      # chapter summary
-    └── Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing.ipynb
+    └── Chapter_03_Dimensionality_Reduction_Techniques.ipynb
 ```
 
 New chapters are added as `Chapter_XX_<Title>/` folders with the same layout.
@@ -118,7 +121,7 @@ New chapters are added as `Chapter_XX_<Title>/` folders with the same layout.
 
 Every code cell starts with a label comment: `# BOOK CODE` for a listing reproduced from the book, `# EXTRA` for code written for this repository.
 
-All notebooks are committed **with their outputs** and use fixed random seeds, so they reproduce the same results. They rely on datasets bundled with scikit-learn or generated synthetically; exercises that need a larger dataset download it once with a scikit-learn fetcher (for example `fetch_california_housing()` in Chapter 2), which caches it in `~/scikit_learn_data`.
+All notebooks are committed **with their outputs** and use fixed random seeds, so they reproduce the same results (apart from measured run times). They rely on datasets bundled with scikit-learn or generated synthetically; exercises that need a larger dataset download it once with a scikit-learn fetcher (for example `fetch_california_housing()` in Chapter 2), which caches it in `~/scikit_learn_data`.
 
 ## Learning Recommendations
 
