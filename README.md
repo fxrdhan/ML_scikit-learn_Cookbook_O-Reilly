@@ -13,27 +13,27 @@ This repository reproduces, chapter by chapter, the code of **_scikit-learn Cook
 
 ---
 
-## 📚 Chapters
+## Chapters
 
 | # | Chapter | Status | Notebook |
 |---|---|---|---|
-| 01 | Common Conventions and API Elements of scikit-learn | ✅ Done | [Chapter 1 notebook](Chapter_01_Common_Conventions_and_API_Elements/Chapter_01_Common_Conventions_and_API_Elements.ipynb) · [summary](Chapter_01_Common_Conventions_and_API_Elements/README.md) |
-| 02 | Pre-Model Workflow and Data Preprocessing | ⏳ Planned | — |
-| 03 | Dimensionality Reduction Techniques | ⏳ Planned | — |
-| 04 | Building Models with Distance Metrics and Nearest Neighbors | ⏳ Planned | — |
-| 05 | Linear Models and Regularization | ⏳ Planned | — |
-| 06 | Advanced Logistic Regression and Extensions | ⏳ Planned | — |
-| 07 | Support Vector Machines and Kernel Methods | ⏳ Planned | — |
-| 08 | Tree-Based Algorithms and Ensemble Methods | ⏳ Planned | — |
-| 09 | Text Processing and Multiclass Classification | ⏳ Planned | — |
-| 10 | Clustering Techniques | ⏳ Planned | — |
-| 11 | Novelty and Outlier Detection | ⏳ Planned | — |
-| 12 | Cross-Validation and Model Evaluation Techniques | ⏳ Planned | — |
-| 13 | Deploying scikit-learn Models in Production | ⏳ Planned | — |
+| 01 | Common Conventions and API Elements of scikit-learn | Done | [Chapter 1 notebook](Chapter_01_Common_Conventions_and_API_Elements/Chapter_01_Common_Conventions_and_API_Elements.ipynb) · [summary](Chapter_01_Common_Conventions_and_API_Elements/README.md) |
+| 02 | Pre-Model Workflow and Data Preprocessing | Planned | — |
+| 03 | Dimensionality Reduction Techniques | Planned | — |
+| 04 | Building Models with Distance Metrics and Nearest Neighbors | Planned | — |
+| 05 | Linear Models and Regularization | Planned | — |
+| 06 | Advanced Logistic Regression and Extensions | Planned | — |
+| 07 | Support Vector Machines and Kernel Methods | Planned | — |
+| 08 | Tree-Based Algorithms and Ensemble Methods | Planned | — |
+| 09 | Text Processing and Multiclass Classification | Planned | — |
+| 10 | Clustering Techniques | Planned | — |
+| 11 | Novelty and Outlier Detection | Planned | — |
+| 12 | Cross-Validation and Model Evaluation Techniques | Planned | — |
+| 13 | Deploying scikit-learn Models in Production | Planned | — |
 
 ---
 
-## 🧭 Chapter-by-chapter overview
+## Chapter-by-chapter overview
 
 The book moves from the conventions of the library, through data preparation and the main families of algorithms, to evaluation and deployment. A short explanation of each chapter:
 
@@ -91,31 +91,33 @@ From notebook to production: **serializing and persisting** models (joblib, pick
 
 ---
 
-## 🗂️ Repository structure
+## Repository structure
 
 ```
 ML_scikit-learn_Cookbook_O-Reilly/
-├── README.md                                          ← this file (overview of every chapter)
-├── requirements.txt                                   ← Python dependencies
+├── README.md                                          # this file: overview of every chapter
+├── requirements.txt                                   # Python dependencies
 └── Chapter_01_Common_Conventions_and_API_Elements/
-    ├── README.md                                      ← chapter summary
+    ├── README.md                                      # chapter summary
     └── Chapter_01_Common_Conventions_and_API_Elements.ipynb
 ```
 
 New chapters are added as `Chapter_XX_<Title>/` folders with the same layout.
 
-## 📓 How each notebook is organized
+## How each notebook is organized
 
-| Marker | Meaning |
+| Section | Meaning |
 |---|---|
-| **📝 Summary** | What the book says in the recipe, condensed |
-| **📖 Theory** | The concepts behind the recipe: math, algorithms, design reasoning |
-| **📘 Book code** | The listing reproduced from the book (with its page number) + an analysis of the output |
-| **🧪 Extra** | Additional experiments written for this repository (not part of the book) |
+| **Summary** | What the book says in the recipe, condensed |
+| **Theory** | The concepts behind the recipe: math, algorithms, design reasoning |
+| **Book code** | The listing reproduced from the book (with its page number) + an analysis of the output |
+| **Extra** | Additional experiments written for this repository (not part of the book) |
+
+Every code cell starts with a label comment: `# BOOK CODE` for a listing reproduced from the book, `# EXTRA` for code written for this repository.
 
 All notebooks are committed **with their outputs**, use fixed random seeds, and rely only on datasets bundled with scikit-learn or generated synthetically, so they run offline and reproduce the same results.
 
-## 🧠 Learning Recommendations
+## Learning Recommendations
 
 For beginners exploring this repository:
 
@@ -124,7 +126,7 @@ For beginners exploring this repository:
 - Run notebook examples and experiment with different parameters.
 - Compare model results to better understand algorithm performance.
 
-## 🚀 Running the notebooks
+## Running the notebooks
 
 **Colab:** open a notebook on GitHub and use its **Open in Colab** badge.
 
@@ -141,7 +143,7 @@ jupyter notebook
 
 The book targets **scikit-learn 1.5**; the notebooks were executed with **scikit-learn 1.9.1 on Python 3.12**. Differences between the book's version and the current API are pointed out where they matter (for example, the public estimator-tags API introduced in scikit-learn 1.6).
 
-## 📖 References
+## References
 
 - Sukup, J. (2025). *scikit-learn Cookbook* (3rd ed.). Packt Publishing.
 - Official code repository of the book: <https://github.com/PacktPublishing/scikit-learn-Cookbook-Third-Edition>
