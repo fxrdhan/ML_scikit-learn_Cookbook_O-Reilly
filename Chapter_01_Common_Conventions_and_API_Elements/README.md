@@ -1,6 +1,6 @@
 # Chapter 1 — Common Conventions and API Elements of scikit-learn
 
-📓 **Notebook:** [`Chapter_01_Common_Conventions_and_API_Elements.ipynb`](Chapter_01_Common_Conventions_and_API_Elements.ipynb)
+**Notebook:** [`Chapter_01_Common_Conventions_and_API_Elements.ipynb`](Chapter_01_Common_Conventions_and_API_Elements.ipynb)
 <a href="https://colab.research.google.com/github/fxrdhan/ML_scikit-learn_Cookbook_O-Reilly/blob/main/Chapter_01_Common_Conventions_and_API_Elements/Chapter_01_Common_Conventions_and_API_Elements.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 ## Summary
