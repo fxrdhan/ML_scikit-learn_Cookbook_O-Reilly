@@ -18,7 +18,7 @@ This repository reproduces, chapter by chapter, the code of **_scikit-learn Cook
 | # | Chapter | Status | Notebook |
 |---|---|---|---|
 | 01 | Common Conventions and API Elements of scikit-learn | Done | [Chapter 1 notebook](Chapter_01_Common_Conventions_and_API_Elements/Chapter_01_Common_Conventions_and_API_Elements.ipynb) · [summary](Chapter_01_Common_Conventions_and_API_Elements/README.md) |
-| 02 | Pre-Model Workflow and Data Preprocessing | Planned | — |
+| 02 | Pre-Model Workflow and Data Preprocessing | Done | [Chapter 2 notebook](Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing/Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing.ipynb) · [summary](Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing/README.md) |
 | 03 | Dimensionality Reduction Techniques | Planned | — |
 | 04 | Building Models with Distance Metrics and Nearest Neighbors | Planned | — |
 | 05 | Linear Models and Regularization | Planned | — |
@@ -43,7 +43,7 @@ The "grammar" of scikit-learn. Every object follows the same design: **estimator
 
 ### Chapter 2 — Pre-Model Workflow and Data Preprocessing
 "Garbage in, garbage out": data quality largely decides model quality. The chapter shows how raw data affects performance and how to handle common data issues — **missing values** (imputation), **scaling** numeric features, **encoding categorical variables** — and then combines these steps into **pipelines** (including how to visualize them). It closes with **feature engineering** and an exercise that builds a complete preprocessing pipeline.
-*Key tools:* `SimpleImputer`, `KNNImputer`, `IterativeImputer`, `StandardScaler`, `MinMaxScaler`, `OneHotEncoder`, `ColumnTransformer`, `Pipeline`, `PolynomialFeatures`, `RFE`.
+*Key tools:* `SimpleImputer`, `KNNImputer`, `IterativeImputer`, `StandardScaler`, `MinMaxScaler`, `Normalizer`, `OneHotEncoder`, `LabelEncoder`, `ColumnTransformer`, `Pipeline`, `PolynomialFeatures`, `KBinsDiscretizer`, `RFE`, `SelectFromModel`.
 
 ### Chapter 3 — Dimensionality Reduction Techniques
 Why fewer, better features help (less noise, less computation, mitigating the curse of dimensionality) and the theory behind reducing dimensions while keeping information. Covers **PCA** (unsupervised projection onto directions of maximum variance), **LDA** (supervised projection that maximizes class separability), how PCA and LDA differ, and **t-SNE** for non-linear visualization — plus guidelines for choosing a technique and its impact on model performance.
@@ -97,9 +97,12 @@ From notebook to production: **serializing and persisting** models (joblib, pick
 ML_scikit-learn_Cookbook_O-Reilly/
 ├── README.md                                          # this file: overview of every chapter
 ├── requirements.txt                                   # Python dependencies
-└── Chapter_01_Common_Conventions_and_API_Elements/
+├── Chapter_01_Common_Conventions_and_API_Elements/
+│   ├── README.md                                      # chapter summary
+│   └── Chapter_01_Common_Conventions_and_API_Elements.ipynb
+└── Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing/
     ├── README.md                                      # chapter summary
-    └── Chapter_01_Common_Conventions_and_API_Elements.ipynb
+    └── Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing.ipynb
 ```
 
 New chapters are added as `Chapter_XX_<Title>/` folders with the same layout.
@@ -115,7 +118,7 @@ New chapters are added as `Chapter_XX_<Title>/` folders with the same layout.
 
 Every code cell starts with a label comment: `# BOOK CODE` for a listing reproduced from the book, `# EXTRA` for code written for this repository.
 
-All notebooks are committed **with their outputs**, use fixed random seeds, and rely only on datasets bundled with scikit-learn or generated synthetically, so they run offline and reproduce the same results.
+All notebooks are committed **with their outputs** and use fixed random seeds, so they reproduce the same results. They rely on datasets bundled with scikit-learn or generated synthetically; exercises that need a larger dataset download it once with a scikit-learn fetcher (for example `fetch_california_housing()` in Chapter 2), which caches it in `~/scikit_learn_data`.
 
 ## Learning Recommendations
 
