@@ -23,7 +23,7 @@ This repository reproduces, chapter by chapter, the code of **_scikit-learn Cook
 | 04 | Building Models with Distance Metrics and Nearest Neighbors | Done | [Chapter 4 notebook](Chapter_04_Distance_Metrics_and_Nearest_Neighbors/Chapter_04_Distance_Metrics_and_Nearest_Neighbors.ipynb) · [summary](Chapter_04_Distance_Metrics_and_Nearest_Neighbors/README.md) |
 | 05 | Linear Models and Regularization | Done | [Chapter 5 notebook](Chapter_05_Linear_Models_and_Regularization/Chapter_05_Linear_Models_and_Regularization.ipynb) · [summary](Chapter_05_Linear_Models_and_Regularization/README.md) |
 | 06 | Advanced Logistic Regression and Extensions | Done | [Chapter 6 notebook](Chapter_06_Advanced_Logistic_Regression_and_Extensions/Chapter_06_Advanced_Logistic_Regression_and_Extensions.ipynb) · [summary](Chapter_06_Advanced_Logistic_Regression_and_Extensions/README.md) |
-| 07 | Support Vector Machines and Kernel Methods | Planned | — |
+| 07 | Support Vector Machines and Kernel Methods | Done | [Chapter 7 notebook](Chapter_07_Support_Vector_Machines_and_Kernel_Methods/Chapter_07_Support_Vector_Machines_and_Kernel_Methods.ipynb) · [summary](Chapter_07_Support_Vector_Machines_and_Kernel_Methods/README.md) |
 | 08 | Tree-Based Algorithms and Ensemble Methods | Planned | — |
 | 09 | Text Processing and Multiclass Classification | Planned | — |
 | 10 | Clustering Techniques | Planned | — |
@@ -63,7 +63,7 @@ Logistic regression as a probabilistic classifier and its extensions: **multicla
 
 ### Chapter 7 — Support Vector Machines and Kernel Methods
 **Support vector machines** find the maximum-margin decision boundary. The chapter explains **kernel functions** (linear, polynomial, RBF, …) and the kernel trick for non-linear problems, **tuning** `C` and `gamma`, SVMs in **high-dimensional** spaces, and **evaluating** and visualizing SVM decision boundaries.
-*Key tools:* `SVC`, `SVR`, kernels, `GridSearchCV`.
+*Key tools:* `SVC`, `SVR`, `LinearSVC`, kernels, `GridSearchCV`, `CalibratedClassifierCV`, `DecisionBoundaryDisplay`.
 
 ### Chapter 8 — Tree-Based Algorithms and Ensemble Methods
 **Decision trees** (recursive splits that reduce impurity) and **ensembles** that combine many trees: **random forests and bagging** (averaging decorrelated trees to cut variance) and **gradient boosting machines** (adding trees sequentially to correct errors). Includes hyperparameter tuning for trees and ensembles and a comparison of ensemble methods.
@@ -112,9 +112,12 @@ ML_scikit-learn_Cookbook_O-Reilly/
 ├── Chapter_05_Linear_Models_and_Regularization/
 │   ├── README.md                                      # chapter summary
 │   └── Chapter_05_Linear_Models_and_Regularization.ipynb
-└── Chapter_06_Advanced_Logistic_Regression_and_Extensions/
+├── Chapter_06_Advanced_Logistic_Regression_and_Extensions/
+│   ├── README.md                                      # chapter summary
+│   └── Chapter_06_Advanced_Logistic_Regression_and_Extensions.ipynb
+└── Chapter_07_Support_Vector_Machines_and_Kernel_Methods/
     ├── README.md                                      # chapter summary
-    └── Chapter_06_Advanced_Logistic_Regression_and_Extensions.ipynb
+    └── Chapter_07_Support_Vector_Machines_and_Kernel_Methods.ipynb
 ```
 
 New chapters are added as `Chapter_XX_<Title>/` folders with the same layout.
