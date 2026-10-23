@@ -25,7 +25,7 @@ This repository reproduces, chapter by chapter, the code of **_scikit-learn Cook
 | 06 | Advanced Logistic Regression and Extensions | Done | [Chapter 6 notebook](Chapter_06_Advanced_Logistic_Regression_and_Extensions/Chapter_06_Advanced_Logistic_Regression_and_Extensions.ipynb) · [summary](Chapter_06_Advanced_Logistic_Regression_and_Extensions/README.md) |
 | 07 | Support Vector Machines and Kernel Methods | Done | [Chapter 7 notebook](Chapter_07_Support_Vector_Machines_and_Kernel_Methods/Chapter_07_Support_Vector_Machines_and_Kernel_Methods.ipynb) · [summary](Chapter_07_Support_Vector_Machines_and_Kernel_Methods/README.md) |
 | 08 | Tree-Based Algorithms and Ensemble Methods | Done | [Chapter 8 notebook](Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods/Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods.ipynb) · [summary](Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods/README.md) |
-| 09 | Text Processing and Multiclass Classification | Planned | — |
+| 09 | Text Processing and Multiclass Classification | Done | [Chapter 9 notebook](Chapter_09_Text_Processing_and_Multiclass_Classification/Chapter_09_Text_Processing_and_Multiclass_Classification.ipynb) · [summary](Chapter_09_Text_Processing_and_Multiclass_Classification/README.md) |
 | 10 | Clustering Techniques | Planned | — |
 | 11 | Novelty and Outlier Detection | Planned | — |
 | 12 | Cross-Validation and Model Evaluation Techniques | Planned | — |
@@ -70,8 +70,8 @@ Logistic regression as a probabilistic classifier and its extensions: **multicla
 *Key tools:* `DecisionTreeClassifier`, `plot_tree`, `RandomForestClassifier`, `GradientBoostingClassifier`, `HistGradientBoostingClassifier`, `StackingClassifier`, `permutation_importance`.
 
 ### Chapter 9 — Text Processing and Multiclass Classification
-Turning text into numbers and classifying it. Covers **text preprocessing**, **vectorization** (bag-of-words and **TF-IDF**), **feature extraction** with n-grams, building **text classification** models, **multiclass strategies** (one-vs-rest, one-vs-one) and **evaluating** text models.
-*Key tools:* NLTK, `CountVectorizer`, `TfidfVectorizer`, `MultinomialNB`, `LogisticRegression`, `OneVsRestClassifier`, `OneVsOneClassifier`.
+Turning text into numbers and classifying it. Covers **text preprocessing** (the bag of words), **vectorization** (counts, **TF-IDF**, embeddings), **feature extraction** (n-grams, part-of-speech tags, named entities), **text classification** models (Naive Bayes, SVM, logistic regression), **multiclass strategies** (one-vs-rest, one-vs-one) and **evaluating** text models.
+*Key tools:* NLTK (corpora, tokenizer, POS tagger), `CountVectorizer`, `TfidfVectorizer`, `HashingVectorizer`, `MultinomialNB`, `SVC`, `LogisticRegression`, `OneVsRestClassifier`, `OneVsOneClassifier`, `classification_report`.
 
 ### Chapter 10 — Clustering Techniques
 Unsupervised learning that finds natural groupings without labels: **K-means**, **hierarchical clustering**, density-based **DBSCAN**, **cluster evaluation metrics** (silhouette, Davies–Bouldin, adjusted Rand index), how to choose the right algorithm, and advanced techniques such as spectral clustering and Gaussian mixture models.
@@ -118,9 +118,12 @@ ML_scikit-learn_Cookbook_O-Reilly/
 ├── Chapter_07_Support_Vector_Machines_and_Kernel_Methods/
 │   ├── README.md                                      # chapter summary
 │   └── Chapter_07_Support_Vector_Machines_and_Kernel_Methods.ipynb
-└── Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods/
+├── Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods/
+│   ├── README.md                                      # chapter summary
+│   └── Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods.ipynb
+└── Chapter_09_Text_Processing_and_Multiclass_Classification/
     ├── README.md                                      # chapter summary
-    └── Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods.ipynb
+    └── Chapter_09_Text_Processing_and_Multiclass_Classification.ipynb
 ```
 
 New chapters are added as `Chapter_XX_<Title>/` folders with the same layout.
@@ -136,7 +139,7 @@ New chapters are added as `Chapter_XX_<Title>/` folders with the same layout.
 
 Every code cell starts with a label comment: `# BOOK CODE` for a listing reproduced from the book, `# EXTRA` for code written for this repository.
 
-All notebooks are committed **with their outputs** and use fixed random seeds, so they reproduce the same results (apart from measured run times). They rely on datasets bundled with scikit-learn or generated synthetically; exercises that need a larger dataset download it once with a scikit-learn fetcher (for example `fetch_california_housing()` in Chapter 2), which caches it in `~/scikit_learn_data`.
+All notebooks are committed **with their outputs** and use fixed random seeds, so they reproduce the same results (apart from measured run times). They rely on datasets bundled with scikit-learn or generated synthetically; exercises that need a larger dataset download it once with a scikit-learn fetcher (for example `fetch_california_housing()` in Chapter 2), which caches it in `~/scikit_learn_data`. Chapter 9 uses three NLTK corpora (`movie_reviews`, `reuters` and `brown`) and a few NLTK models; its notebook downloads them once, only when they are missing.
 
 ## How to study the notebooks
 
