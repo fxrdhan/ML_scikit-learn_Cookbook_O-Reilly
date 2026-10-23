@@ -29,7 +29,7 @@ This repository reproduces, chapter by chapter, the code of **_scikit-learn Cook
 | 10 | Clustering Techniques | Done | [Chapter 10 notebook](Chapter_10_Clustering_Techniques/Chapter_10_Clustering_Techniques.ipynb) · [summary](Chapter_10_Clustering_Techniques/README.md) |
 | 11 | Novelty and Outlier Detection | Done | [Chapter 11 notebook](Chapter_11_Novelty_and_Outlier_Detection/Chapter_11_Novelty_and_Outlier_Detection.ipynb) · [summary](Chapter_11_Novelty_and_Outlier_Detection/README.md) |
 | 12 | Cross-Validation and Model Evaluation Techniques | Done | [Chapter 12 notebook](Chapter_12_Cross_Validation_and_Model_Evaluation/Chapter_12_Cross_Validation_and_Model_Evaluation.ipynb) · [summary](Chapter_12_Cross_Validation_and_Model_Evaluation/README.md) |
-| 13 | Deploying scikit-learn Models in Production | Planned | — |
+| 13 | Deploying scikit-learn Models in Production | Done | [Chapter 13 notebook](Chapter_13_Deploying_Models_in_Production/Chapter_13_Deploying_Models_in_Production.ipynb) · [summary](Chapter_13_Deploying_Models_in_Production/README.md) |
 
 ---
 
@@ -87,7 +87,7 @@ Reliable estimates of how a model will perform on unseen data. Covers **k-fold c
 
 ### Chapter 13 — Deploying scikit-learn Models in Production
 From notebook to production: **serializing and persisting** models (joblib, pickle), **scaling** models for production workloads, **monitoring and updating** deployed models (e.g. when data drift degrades accuracy), managing the **model life cycle**, and building **deployment pipelines** with automated validation checks.
-*Key tools:* `joblib`, `pickle`, `Pipeline`, `SGDClassifier.partial_fit` (incremental model updates), validation thresholds before deployment.
+*Key tools:* `joblib` (`dump`, `load`, `compress`, `mmap_mode`), `pickle` (protocols, restricted unpickling), `Pipeline`, `n_jobs`, `SGDClassifier.partial_fit` (incremental model updates), `InconsistentVersionWarning`, validation thresholds and gates before deployment.
 
 ---
 
@@ -130,12 +130,15 @@ ML_scikit-learn_Cookbook_O-Reilly/
 ├── Chapter_11_Novelty_and_Outlier_Detection/
 │   ├── README.md                                      # chapter summary
 │   └── Chapter_11_Novelty_and_Outlier_Detection.ipynb
-└── Chapter_12_Cross_Validation_and_Model_Evaluation/
+├── Chapter_12_Cross_Validation_and_Model_Evaluation/
+│   ├── README.md                                      # chapter summary
+│   └── Chapter_12_Cross_Validation_and_Model_Evaluation.ipynb
+└── Chapter_13_Deploying_Models_in_Production/
     ├── README.md                                      # chapter summary
-    └── Chapter_12_Cross_Validation_and_Model_Evaluation.ipynb
+    └── Chapter_13_Deploying_Models_in_Production.ipynb
 ```
 
-New chapters are added as `Chapter_XX_<Title>/` folders with the same layout.
+Every chapter folder has the same layout.
 
 ## How each notebook is organized
 
@@ -148,7 +151,7 @@ New chapters are added as `Chapter_XX_<Title>/` folders with the same layout.
 
 Every code cell starts with a label comment: `# BOOK CODE` for a listing reproduced from the book, `# EXTRA` for code written for this repository.
 
-All notebooks are committed **with their outputs** and use fixed random seeds, so they reproduce the same results (apart from measured run times). They rely on datasets bundled with scikit-learn or generated synthetically; exercises that need a larger dataset download it once with a scikit-learn fetcher (for example `fetch_california_housing()` in Chapter 2), which caches it in `~/scikit_learn_data`. Chapter 9 uses three NLTK corpora (`movie_reviews`, `reuters` and `brown`) and a few NLTK models; its notebook downloads them once, only when they are missing.
+All notebooks are committed **with their outputs** and use fixed random seeds, so they reproduce the same results (apart from measured run times, and the cross-validation score of one listing in Chapter 13 whose forest has no seed in the book's code). They rely on datasets bundled with scikit-learn or generated synthetically; exercises that need a larger dataset download it once with a scikit-learn fetcher (for example `fetch_california_housing()` in Chapter 2), which caches it in `~/scikit_learn_data`. Chapter 9 uses three NLTK corpora (`movie_reviews`, `reuters` and `brown`) and a few NLTK models; its notebook downloads them once, only when they are missing.
 
 ## How to study the notebooks
 
