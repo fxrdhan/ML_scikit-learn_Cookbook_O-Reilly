@@ -27,7 +27,7 @@ This repository reproduces, chapter by chapter, the code of **_scikit-learn Cook
 | 08 | Tree-Based Algorithms and Ensemble Methods | Done | [Chapter 8 notebook](Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods/Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods.ipynb) · [summary](Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods/README.md) |
 | 09 | Text Processing and Multiclass Classification | Done | [Chapter 9 notebook](Chapter_09_Text_Processing_and_Multiclass_Classification/Chapter_09_Text_Processing_and_Multiclass_Classification.ipynb) · [summary](Chapter_09_Text_Processing_and_Multiclass_Classification/README.md) |
 | 10 | Clustering Techniques | Done | [Chapter 10 notebook](Chapter_10_Clustering_Techniques/Chapter_10_Clustering_Techniques.ipynb) · [summary](Chapter_10_Clustering_Techniques/README.md) |
-| 11 | Novelty and Outlier Detection | Planned | — |
+| 11 | Novelty and Outlier Detection | Done | [Chapter 11 notebook](Chapter_11_Novelty_and_Outlier_Detection/Chapter_11_Novelty_and_Outlier_Detection.ipynb) · [summary](Chapter_11_Novelty_and_Outlier_Detection/README.md) |
 | 12 | Cross-Validation and Model Evaluation Techniques | Planned | — |
 | 13 | Deploying scikit-learn Models in Production | Planned | — |
 
@@ -79,7 +79,7 @@ Unsupervised learning that finds natural groupings without labels: **K-means**, 
 
 ### Chapter 11 — Novelty and Outlier Detection
 Finding unusual observations — **outliers** in the training data and **novelties** in new data. Covers **Isolation Forest**, **One-Class SVM** and the **Local Outlier Factor (LOF)**, how to evaluate detectors, how to handle detected outliers, and how to choose the right technique.
-*Key tools:* `IsolationForest`, `OneClassSVM`, `LocalOutlierFactor`.
+*Key tools:* `IsolationForest`, `OneClassSVM`, `LocalOutlierFactor` (including `novelty=True`), `EllipticEnvelope`, `roc_auc_score`, `average_precision_score`.
 
 ### Chapter 12 — Cross-Validation and Model Evaluation Techniques
 Reliable estimates of how a model will perform on unseen data. Covers **k-fold cross-validation** and more advanced schemes (stratified k-fold, leave-one-out, …), implementing CV in scikit-learn, **model selection** with grid and randomized hyperparameter search, and **generalization** diagnostics such as learning and validation curves.
@@ -124,9 +124,12 @@ ML_scikit-learn_Cookbook_O-Reilly/
 ├── Chapter_09_Text_Processing_and_Multiclass_Classification/
 │   ├── README.md                                      # chapter summary
 │   └── Chapter_09_Text_Processing_and_Multiclass_Classification.ipynb
-└── Chapter_10_Clustering_Techniques/
+├── Chapter_10_Clustering_Techniques/
+│   ├── README.md                                      # chapter summary
+│   └── Chapter_10_Clustering_Techniques.ipynb
+└── Chapter_11_Novelty_and_Outlier_Detection/
     ├── README.md                                      # chapter summary
-    └── Chapter_10_Clustering_Techniques.ipynb
+    └── Chapter_11_Novelty_and_Outlier_Detection.ipynb
 ```
 
 New chapters are added as `Chapter_XX_<Title>/` folders with the same layout.
