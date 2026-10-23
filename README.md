@@ -26,7 +26,7 @@ This repository reproduces, chapter by chapter, the code of **_scikit-learn Cook
 | 07 | Support Vector Machines and Kernel Methods | Done | [Chapter 7 notebook](Chapter_07_Support_Vector_Machines_and_Kernel_Methods/Chapter_07_Support_Vector_Machines_and_Kernel_Methods.ipynb) · [summary](Chapter_07_Support_Vector_Machines_and_Kernel_Methods/README.md) |
 | 08 | Tree-Based Algorithms and Ensemble Methods | Done | [Chapter 8 notebook](Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods/Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods.ipynb) · [summary](Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods/README.md) |
 | 09 | Text Processing and Multiclass Classification | Done | [Chapter 9 notebook](Chapter_09_Text_Processing_and_Multiclass_Classification/Chapter_09_Text_Processing_and_Multiclass_Classification.ipynb) · [summary](Chapter_09_Text_Processing_and_Multiclass_Classification/README.md) |
-| 10 | Clustering Techniques | Planned | — |
+| 10 | Clustering Techniques | Done | [Chapter 10 notebook](Chapter_10_Clustering_Techniques/Chapter_10_Clustering_Techniques.ipynb) · [summary](Chapter_10_Clustering_Techniques/README.md) |
 | 11 | Novelty and Outlier Detection | Planned | — |
 | 12 | Cross-Validation and Model Evaluation Techniques | Planned | — |
 | 13 | Deploying scikit-learn Models in Production | Planned | — |
@@ -75,7 +75,7 @@ Turning text into numbers and classifying it. Covers **text preprocessing** (the
 
 ### Chapter 10 — Clustering Techniques
 Unsupervised learning that finds natural groupings without labels: **K-means**, **hierarchical clustering**, density-based **DBSCAN**, **cluster evaluation metrics** (silhouette, Davies–Bouldin, adjusted Rand index), how to choose the right algorithm, and advanced techniques such as spectral clustering and Gaussian mixture models.
-*Key tools:* `KMeans`, `AgglomerativeClustering` (+ SciPy dendrograms), `DBSCAN`, `SpectralClustering`, `GaussianMixture`, `silhouette_score`.
+*Key tools:* `KMeans`, `BisectingKMeans`, `AgglomerativeClustering` (+ SciPy dendrograms), `DBSCAN`, `HDBSCAN`, `SpectralClustering`, `GaussianMixture`, `silhouette_score`, `davies_bouldin_score`, `adjusted_rand_score`.
 
 ### Chapter 11 — Novelty and Outlier Detection
 Finding unusual observations — **outliers** in the training data and **novelties** in new data. Covers **Isolation Forest**, **One-Class SVM** and the **Local Outlier Factor (LOF)**, how to evaluate detectors, how to handle detected outliers, and how to choose the right technique.
@@ -121,9 +121,12 @@ ML_scikit-learn_Cookbook_O-Reilly/
 ├── Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods/
 │   ├── README.md                                      # chapter summary
 │   └── Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods.ipynb
-└── Chapter_09_Text_Processing_and_Multiclass_Classification/
+├── Chapter_09_Text_Processing_and_Multiclass_Classification/
+│   ├── README.md                                      # chapter summary
+│   └── Chapter_09_Text_Processing_and_Multiclass_Classification.ipynb
+└── Chapter_10_Clustering_Techniques/
     ├── README.md                                      # chapter summary
-    └── Chapter_09_Text_Processing_and_Multiclass_Classification.ipynb
+    └── Chapter_10_Clustering_Techniques.ipynb
 ```
 
 New chapters are added as `Chapter_XX_<Title>/` folders with the same layout.
