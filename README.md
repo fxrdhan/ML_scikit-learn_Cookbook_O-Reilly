@@ -1,1 +1,176 @@
 # ML_scikit-learn_Cookbook_O-Reilly
+
+**Code reproduction and theoretical deep-dive of _scikit-learn Cookbook, Third Edition_**
+
+This repository reproduces, chapter by chapter, the code of **_scikit-learn Cookbook, Third Edition — Over 80 recipes for machine learning in Python with scikit-learn_** by **John Sukup** (Packt Publishing, 2025). Each chapter has its own Jupyter notebook that:
+
+1. **reproduces** every code listing of the chapter and runs it against a current scikit-learn release,
+2. **summarizes** the chapter and each of its recipes,
+3. **explains the theory** behind every concept (math, algorithms and design reasoning), and
+4. adds **extra experiments** that turn concepts the book explains only in prose into runnable code.
+
+> Assignment: *Tugas 2 — Enrichment for Machine Learning classes: "Code Reproduction + Theoretical Deep-Dive from scikit-learn Cookbook"*.
+
+---
+
+## Chapters
+
+| # | Chapter | Status | Notebook |
+|---|---|---|---|
+| 01 | Common Conventions and API Elements of scikit-learn | Done | [Chapter 1 notebook](Chapter_01_Common_Conventions_and_API_Elements/Chapter_01_Common_Conventions_and_API_Elements.ipynb) · [summary](Chapter_01_Common_Conventions_and_API_Elements/README.md) |
+| 02 | Pre-Model Workflow and Data Preprocessing | Done | [Chapter 2 notebook](Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing/Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing.ipynb) · [summary](Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing/README.md) |
+| 03 | Dimensionality Reduction Techniques | Done | [Chapter 3 notebook](Chapter_03_Dimensionality_Reduction_Techniques/Chapter_03_Dimensionality_Reduction_Techniques.ipynb) · [summary](Chapter_03_Dimensionality_Reduction_Techniques/README.md) |
+| 04 | Building Models with Distance Metrics and Nearest Neighbors | Done | [Chapter 4 notebook](Chapter_04_Distance_Metrics_and_Nearest_Neighbors/Chapter_04_Distance_Metrics_and_Nearest_Neighbors.ipynb) · [summary](Chapter_04_Distance_Metrics_and_Nearest_Neighbors/README.md) |
+| 05 | Linear Models and Regularization | Done | [Chapter 5 notebook](Chapter_05_Linear_Models_and_Regularization/Chapter_05_Linear_Models_and_Regularization.ipynb) · [summary](Chapter_05_Linear_Models_and_Regularization/README.md) |
+| 06 | Advanced Logistic Regression and Extensions | Done | [Chapter 6 notebook](Chapter_06_Advanced_Logistic_Regression_and_Extensions/Chapter_06_Advanced_Logistic_Regression_and_Extensions.ipynb) · [summary](Chapter_06_Advanced_Logistic_Regression_and_Extensions/README.md) |
+| 07 | Support Vector Machines and Kernel Methods | Done | [Chapter 7 notebook](Chapter_07_Support_Vector_Machines_and_Kernel_Methods/Chapter_07_Support_Vector_Machines_and_Kernel_Methods.ipynb) · [summary](Chapter_07_Support_Vector_Machines_and_Kernel_Methods/README.md) |
+| 08 | Tree-Based Algorithms and Ensemble Methods | Done | [Chapter 8 notebook](Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods/Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods.ipynb) · [summary](Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods/README.md) |
+| 09 | Text Processing and Multiclass Classification | Done | [Chapter 9 notebook](Chapter_09_Text_Processing_and_Multiclass_Classification/Chapter_09_Text_Processing_and_Multiclass_Classification.ipynb) · [summary](Chapter_09_Text_Processing_and_Multiclass_Classification/README.md) |
+| 10 | Clustering Techniques | Planned | — |
+| 11 | Novelty and Outlier Detection | Planned | — |
+| 12 | Cross-Validation and Model Evaluation Techniques | Planned | — |
+| 13 | Deploying scikit-learn Models in Production | Planned | — |
+
+---
+
+## Chapter-by-chapter overview
+
+The book moves from the conventions of the library, through data preparation and the main families of algorithms, to evaluation and deployment. A short explanation of each chapter:
+
+### Chapter 1 — Common Conventions and API Elements of scikit-learn
+The "grammar" of scikit-learn. Every object follows the same design: **estimators** learn with `fit()` and predict with `predict()`, **transformers** learn and apply a transformation with `fit()`/`transform()`, and **pipelines** chain them into one object. The chapter also covers custom estimators built from `BaseEstimator` and mixins, common attributes and methods (`coef_`, `intercept_`, `score()`), hyperparameter management (`get_params()`, `set_params()`, `GridSearchCV`, `RandomizedSearchCV`), metadata (estimator tags and metadata routing) and best practices for using the API.
+*Key tools:* `fit`/`predict`/`transform`, `Pipeline`, `BaseEstimator`, `GridSearchCV`, `get_tags`.
+
+### Chapter 2 — Pre-Model Workflow and Data Preprocessing
+"Garbage in, garbage out": data quality largely decides model quality. The chapter shows how raw data affects performance and how to handle common data issues — **missing values** (imputation), **scaling** numeric features, **encoding categorical variables** — and then combines these steps into **pipelines** (including how to visualize them). It closes with **feature engineering** and an exercise that builds a complete preprocessing pipeline.
+*Key tools:* `SimpleImputer`, `KNNImputer`, `IterativeImputer`, `StandardScaler`, `MinMaxScaler`, `Normalizer`, `OneHotEncoder`, `LabelEncoder`, `ColumnTransformer`, `Pipeline`, `PolynomialFeatures`, `KBinsDiscretizer`, `RFE`, `SelectFromModel`.
+
+### Chapter 3 — Dimensionality Reduction Techniques
+Why fewer, better features help (less noise, less computation, mitigating the curse of dimensionality) and the theory behind reducing dimensions while keeping information. Covers **PCA** (unsupervised projection onto directions of maximum variance), **LDA** (supervised projection that maximizes class separability), how PCA and LDA differ, and **t-SNE** for non-linear visualization — plus guidelines for choosing a technique and its impact on model performance.
+*Key tools:* `PCA`, `LinearDiscriminantAnalysis`, `TSNE`.
+
+### Chapter 4 — Building Models with Distance Metrics and Nearest Neighbors
+Models that predict from the most similar training examples. Introduces **distance metrics** (Euclidean, Manhattan, Minkowski, …), the **k-nearest neighbors (KNN)** algorithm, **tuning** its hyperparameters (number of neighbors, weighting, metric) with grid search, and **evaluating** KNN classifiers with appropriate metrics.
+*Key tools:* `KNeighborsClassifier`, `GridSearchCV`, `cross_val_score`, `learning_curve`, `confusion_matrix`.
+
+### Chapter 5 — Linear Models and Regularization
+Linear regression and the problem of overfitting. Covers **ordinary least squares**, **Ridge** (L2) and **Lasso** (L1) regression, **ElasticNet** (a mix of both), and the theory and practice of **regularization** — how penalizing coefficients trades a little bias for lower variance and how Lasso performs feature selection.
+*Key tools:* `LinearRegression`, `Ridge`, `Lasso`, `ElasticNet`, `PolynomialFeatures`, `SplineTransformer`.
+
+### Chapter 6 — Advanced Logistic Regression and Extensions
+Logistic regression as a probabilistic classifier and its extensions: **multiclass** strategies (one-vs-rest and multinomial/softmax), **regularization** in logistic regression (`C`, L1/L2 penalties), **multilabel** classification, and the **evaluation metrics** used for classifiers (precision, recall, F1, ROC-AUC, …), with exercises on visualizing results.
+*Key tools:* `LogisticRegression`, `OneVsRestClassifier`, `MultiOutputClassifier`, `ClassifierChain`, `classification_report`, `roc_curve`/`auc`, `DecisionBoundaryDisplay`.
+
+### Chapter 7 — Support Vector Machines and Kernel Methods
+**Support vector machines** find the maximum-margin decision boundary. The chapter explains **kernel functions** (linear, polynomial, RBF, …) and the kernel trick for non-linear problems, **tuning** `C` and `gamma`, SVMs in **high-dimensional** spaces, and **evaluating** and visualizing SVM decision boundaries.
+*Key tools:* `SVC`, `SVR`, `LinearSVC`, kernels, `GridSearchCV`, `CalibratedClassifierCV`, `DecisionBoundaryDisplay`.
+
+### Chapter 8 — Tree-Based Algorithms and Ensemble Methods
+**Decision trees** (recursive splits that reduce impurity) and **ensembles** that combine many trees: **random forests and bagging** (averaging decorrelated trees to cut variance) and **gradient boosting machines** (adding trees sequentially to correct errors). Includes hyperparameter tuning for trees and ensembles and a comparison of ensemble methods.
+*Key tools:* `DecisionTreeClassifier`, `plot_tree`, `RandomForestClassifier`, `GradientBoostingClassifier`, `HistGradientBoostingClassifier`, `StackingClassifier`, `permutation_importance`.
+
+### Chapter 9 — Text Processing and Multiclass Classification
+Turning text into numbers and classifying it. Covers **text preprocessing** (the bag of words), **vectorization** (counts, **TF-IDF**, embeddings), **feature extraction** (n-grams, part-of-speech tags, named entities), **text classification** models (Naive Bayes, SVM, logistic regression), **multiclass strategies** (one-vs-rest, one-vs-one) and **evaluating** text models.
+*Key tools:* NLTK (corpora, tokenizer, POS tagger), `CountVectorizer`, `TfidfVectorizer`, `HashingVectorizer`, `MultinomialNB`, `SVC`, `LogisticRegression`, `OneVsRestClassifier`, `OneVsOneClassifier`, `classification_report`.
+
+### Chapter 10 — Clustering Techniques
+Unsupervised learning that finds natural groupings without labels: **K-means**, **hierarchical clustering**, density-based **DBSCAN**, **cluster evaluation metrics** (silhouette, Davies–Bouldin, adjusted Rand index), how to choose the right algorithm, and advanced techniques such as spectral clustering and Gaussian mixture models.
+*Key tools:* `KMeans`, `AgglomerativeClustering` (+ SciPy dendrograms), `DBSCAN`, `SpectralClustering`, `GaussianMixture`, `silhouette_score`.
+
+### Chapter 11 — Novelty and Outlier Detection
+Finding unusual observations — **outliers** in the training data and **novelties** in new data. Covers **Isolation Forest**, **One-Class SVM** and the **Local Outlier Factor (LOF)**, how to evaluate detectors, how to handle detected outliers, and how to choose the right technique.
+*Key tools:* `IsolationForest`, `OneClassSVM`, `LocalOutlierFactor`.
+
+### Chapter 12 — Cross-Validation and Model Evaluation Techniques
+Reliable estimates of how a model will perform on unseen data. Covers **k-fold cross-validation** and more advanced schemes (stratified k-fold, leave-one-out, …), implementing CV in scikit-learn, **model selection** with grid and randomized hyperparameter search, and **generalization** diagnostics such as learning and validation curves.
+*Key tools:* `cross_val_score`, `cross_validate`, `StratifiedKFold`, `LeaveOneOut`, `GridSearchCV`, `RandomizedSearchCV`, `learning_curve`, `validation_curve`.
+
+### Chapter 13 — Deploying scikit-learn Models in Production
+From notebook to production: **serializing and persisting** models (joblib, pickle), **scaling** models for production workloads, **monitoring and updating** deployed models (e.g. when data drift degrades accuracy), managing the **model life cycle**, and building **deployment pipelines** with automated validation checks.
+*Key tools:* `joblib`, `pickle`, `Pipeline`, `SGDClassifier.partial_fit` (incremental model updates), validation thresholds before deployment.
+
+---
+
+## Repository structure
+
+```
+ML_scikit-learn_Cookbook_O-Reilly/
+├── README.md                                          # this file: overview of every chapter
+├── requirements.txt                                   # Python dependencies
+├── Chapter_01_Common_Conventions_and_API_Elements/
+│   ├── README.md                                      # chapter summary
+│   └── Chapter_01_Common_Conventions_and_API_Elements.ipynb
+├── Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing/
+│   ├── README.md                                      # chapter summary
+│   └── Chapter_02_Pre_Model_Workflow_and_Data_Preprocessing.ipynb
+├── Chapter_03_Dimensionality_Reduction_Techniques/
+│   ├── README.md                                      # chapter summary
+│   └── Chapter_03_Dimensionality_Reduction_Techniques.ipynb
+├── Chapter_04_Distance_Metrics_and_Nearest_Neighbors/
+│   ├── README.md                                      # chapter summary
+│   └── Chapter_04_Distance_Metrics_and_Nearest_Neighbors.ipynb
+├── Chapter_05_Linear_Models_and_Regularization/
+│   ├── README.md                                      # chapter summary
+│   └── Chapter_05_Linear_Models_and_Regularization.ipynb
+├── Chapter_06_Advanced_Logistic_Regression_and_Extensions/
+│   ├── README.md                                      # chapter summary
+│   └── Chapter_06_Advanced_Logistic_Regression_and_Extensions.ipynb
+├── Chapter_07_Support_Vector_Machines_and_Kernel_Methods/
+│   ├── README.md                                      # chapter summary
+│   └── Chapter_07_Support_Vector_Machines_and_Kernel_Methods.ipynb
+├── Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods/
+│   ├── README.md                                      # chapter summary
+│   └── Chapter_08_Tree_Based_Algorithms_and_Ensemble_Methods.ipynb
+└── Chapter_09_Text_Processing_and_Multiclass_Classification/
+    ├── README.md                                      # chapter summary
+    └── Chapter_09_Text_Processing_and_Multiclass_Classification.ipynb
+```
+
+New chapters are added as `Chapter_XX_<Title>/` folders with the same layout.
+
+## How each notebook is organized
+
+| Section | Meaning |
+|---|---|
+| **Summary** | What the book says in the recipe, condensed |
+| **Theory** | The concepts behind the recipe: math, algorithms, design reasoning |
+| **Book code** | The listing reproduced from the book (with its page number) + an analysis of the output |
+| **Extra** | Additional experiments written for this repository (not part of the book) |
+
+Every code cell starts with a label comment: `# BOOK CODE` for a listing reproduced from the book, `# EXTRA` for code written for this repository.
+
+All notebooks are committed **with their outputs** and use fixed random seeds, so they reproduce the same results (apart from measured run times). They rely on datasets bundled with scikit-learn or generated synthetically; exercises that need a larger dataset download it once with a scikit-learn fetcher (for example `fetch_california_housing()` in Chapter 2), which caches it in `~/scikit_learn_data`. Chapter 9 uses three NLTK corpora (`movie_reviews`, `reuters` and `brown`) and a few NLTK models; its notebook downloads them once, only when they are missing.
+
+## How to study the notebooks
+
+A suggested way to work through the repository if scikit-learn is new to you:
+
+1. Read Chapter 1 first. It explains the estimator, transformer and pipeline conventions that every later chapter relies on.
+2. Take Chapters 2 and 3 (preprocessing and dimensionality reduction) before the chapters on models, because their tools come back in all of them.
+3. Inside a notebook, read the **Summary** and **Theory** of a recipe, run its **Book code**, and only then read the output analysis and the **Extra** experiments.
+4. Change one thing at a time (the seed, a regularization strength, the number of neighbors) and compare the new output with the saved one.
+5. When two models are compared, look at the spread over cross-validation folds and not at a single score.
+
+## Running the notebooks
+
+**Colab:** open a notebook on GitHub and use its **Open in Colab** badge.
+
+**Locally:**
+
+```bash
+git clone https://github.com/fxrdhan/ML_scikit-learn_Cookbook_O-Reilly.git
+cd ML_scikit-learn_Cookbook_O-Reilly
+python -m venv .venv
+source .venv/bin/activate          # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+jupyter notebook
+```
+
+The book targets **scikit-learn 1.5**; the notebooks were executed with **scikit-learn 1.9.1 on Python 3.12**. Differences between the book's version and the current API are pointed out where they matter (for example, the public estimator-tags API introduced in scikit-learn 1.6).
+
+## References
+
+- Sukup, J. (2025). *scikit-learn Cookbook* (3rd ed.). Packt Publishing.
+- Official code repository of the book: <https://github.com/PacktPublishing/scikit-learn-Cookbook-Third-Edition>
+- scikit-learn documentation: <https://scikit-learn.org/stable/>
+- Buitinck, L., et al. (2013). API design for machine learning software: experiences from the scikit-learn project. <https://arxiv.org/abs/1309.0238>
